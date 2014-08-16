@@ -11,6 +11,8 @@ The R run_analysis.R script meets the requirments set out in the assignment text
 
 This repository stores the inputs, script, outputs, and the assignment requirements. 
 
+In order to reproduce the output files "meanStdDevFeatures.txt" and "featureMeanSubjectActivity.txt" you must unzip the file "getdata-projectfiles-UCI HAR Dataset.zip" to your working directory, and execute the R script "run_analysis.r".
+
 The R script "run_analysis.r" takes in the following .txt files from the working directory:
 UCI HAR Dataset/test/X_test.txt
 UCI HAR Dataset/train/X_train.txt
