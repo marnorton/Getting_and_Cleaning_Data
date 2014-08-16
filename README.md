@@ -14,19 +14,27 @@ This repository stores the inputs, script, outputs, and the assignment requireme
 In order to reproduce the output files "meanStdDevFeatures.txt" and "featureMeanSubjectActivity.txt" you must unzip the file "getdata-projectfiles-UCI HAR Dataset.zip" to your working directory, and execute the R script "run_analysis.r".
 
 The R script "run_analysis.r" takes in the following .txt files from the working directory:
+
 UCI HAR Dataset/test/X_test.txt
+
 UCI HAR Dataset/train/X_train.txt
+
 UCI HAR Dataset/test/y_test.txt
+
 UCI HAR Dataset/train/y_train.txt
 
 The data is first combined into a single data frame for each of X and y datasets. 
 
 Similarly, the subject datasets below are combined:
+
 UCI HAR Dataset/test/subject_test.txt
+
 UCI HAR Dataset/train/subject_train.txt
 
 Finally, the features and activity datasets below are read in:
+
 UCI HAR Dataset/features.txt
+
 UCI HAR Dataset/activity_labels.txt
 
 The data is given appropriate column names and name codes are replaced with useful descriptions in the dataset.
