@@ -24,11 +24,15 @@ run_analysis <- function()
   # Combine the subject datasets
   subject <- rbind(subjectTrain,subjectTest)
   
+  # Remove all raw datasets which have already been combined above from memory
+  rm(subjectTest, subjectTrain, yTest, yTrain, XTest, XTrain)
+  
+  
   # Read in the features and activity names
   features <- read.table("UCI HAR Dataset//features.txt")
   activities <- read.table("UCI HAR Dataset//activity_labels.txt",stringsAsFactor=FALSE)
   
-  # Assign names to the columns in features and activities
+  # Assign useful names to the columns in features and activities
   names(features) <- c("featureNumber","featureName")
   names(activities) <- c("activityNumber","activityName")
   
@@ -44,6 +48,6 @@ run_analysis <- function()
   
   
   
-  
+  # write.table( row.name=FALSE)
   
 }
