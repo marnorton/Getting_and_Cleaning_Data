@@ -80,9 +80,9 @@ run_analysis <- function()
   # Create a dataset of the average for each feature by activity and by subject
   # and write it to the file featureMeanSubjectActivity.txt
   meltedData <- melt(meanStdDevFeatures, id = c("subject.id","activity"))
-  averagesTable <- dcast(meltedData, subject.id + activity ~ variable, mean)
-  names(averagesTable) <- tidyNamesVector
-  write.table(averagesTable,"featureMeanSubjectActivity.txt",row.names=FALSE)
+  meanTable <- dcast(meltedData, subject.id + activity ~ variable, mean)
+  names(meanTable) <- tidyNamesVector
+  write.table(meanTable,"featureMeanSubjectActivity.txt",row.names=FALSE)
   
   
   
